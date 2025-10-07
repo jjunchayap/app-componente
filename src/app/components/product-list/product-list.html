@@ -1,0 +1,22 @@
+<app-product-card>
+    productName="Laptop Gaming"
+    [Price]= 1500>
+</app-product-card>
+
+<app-product-card>
+    productName="Mouse inalambrico"
+    [Price]= 25>
+</app-product-card>
+
+<!-- Mostrar mensaje si no hay productos -->
+ 
+<div *ngIf="products.length === 0">
+    <p>No hay productos disponibles </p>
+</div>
+
+<button *ngIf="isAdmin" (click) ="deleteProduct()"> Eliminar</button>
+
+<!-- Uso del Pipe -->
+
+<p> Precio Original: {{ product.price | currency}} </p>
+<p> Precio con Descuento: {{ product.price | discount:20 | currency}} </p>
