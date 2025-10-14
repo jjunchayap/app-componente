@@ -18,4 +18,3 @@ OnviewPerfil(){
   this.viewPerfil.emit(this.userEmail);
 } 
 }
-
